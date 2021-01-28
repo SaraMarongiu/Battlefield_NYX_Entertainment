@@ -148,3 +148,67 @@ Patrol <- setRefClass("patrol",
                         initialize = function() { 
                         }
                       ))
+
+# Here I am creating every ship we need (1 carrier, 2 destroyers, 3 submarines and 4 patrol boat for each player, so 20 ships).
+carrier1 <- carrier()
+carrier2 <- carrier()
+
+destroyer1_1 <- destroyer()
+destroyer1_2 <- destroyer()
+
+destroyer2_1 <- destroyer()
+destroyer2_2 <- destroyer()
+
+submarine1_1 <- submarine()
+submarine1_2 <- submarine()
+submarine1_3 <- submarine()
+
+submarine2_1 <- submarine()
+submarine2_2 <- submarine()
+submarine2_3 <- submarine()
+
+patrol_boat1_1 <- patrol()
+patrol_boat1_2 <- patrol()
+patrol_boat1_3 <- patrol()
+patrol_boat1_4 <- patrol()
+
+patrol_boat2_1 <- patrol()
+patrol_boat2_2 <- patrol()
+patrol_boat2_3 <- patrol()
+patrol_boat2_4 <- patrol()
+
+# Here I give to each ship all the attributes we need. I positionated them in a random-chosen position.
+
+attributes(carrier1) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 4, isSunk = FALSE)
+attributes(carrier2) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 4, isSunk = FALSE)
+
+attributes(destroyer1_1) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 3, isSunk = FALSE)
+attributes(destroyer1_2) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 3, isSunk = FALSE)
+
+attributes(destroyer2_1) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 3, isSunk = FALSE)
+attributes(destroyer2_2) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 3, isSunk = FALSE)
+
+attributes(submarine1_1) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+attributes(submarine1_2) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+attributes(submarine1_3) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+
+attributes(submarine2_1) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+attributes(submarine2_2) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+attributes(submarine2_3) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 2, isSunk = FALSE)
+
+attributes(patrol_boat1_1) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat1_2) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat1_3) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat1_4) <- list(player = 1, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+
+attributes(patrol_boat2_1) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat2_2) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat2_3) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+attributes(patrol_boat2_4) <- list(player = 2, coordinates = c(10, 10), orientation = "O", life = 1, isSunk = FALSE)
+
+# Here I create a list with all ships owned by player 1 and player 2.
+
+ships <- list(patrol_boat1_1, patrol_boat1_2, patrol_boat1_3, patrol_boat1_4, submarine1_1, submarine1_2, submarine1_3, destroyer1_1, destroyer1_2, carrier1, patrol_boat2_1, patrol_boat2_2, patrol_boat2_3, patrol_boat2_4, submarine2_1, submarine2_2, submarine2_3, destroyer2_1, destroyer2_2, carrier2)
+
+ship1 <- list(patrol_boat1_1, patrol_boat1_2, patrol_boat1_3, patrol_boat1_4, submarine1_1, submarine1_2, submarine1_3, destroyer1_1, destroyer1_2, carrier1)
+ship2 <- list(patrol_boat2_1, patrol_boat2_2, patrol_boat2_3, patrol_boat2_4, submarine2_1, submarine2_2, submarine2_3, destroyer2_1, destroyer2_2, carrier2)
