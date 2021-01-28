@@ -262,3 +262,121 @@ while(TRUE){
   
   
   destination <- Coordinates(as.integer(newRow), as.integer(newCol))
+  # We want to give the destination coordinates and the orientation to the method
+# locate_patrol() of the chessboard class.
+
+battlefield_1$draw()
+#ask to locate patrol 2
+
+
+battlefield_1$draw()
+#ask to locate patrol 3
+
+
+battlefield_1$draw()
+#ask to locate patrol 4
+
+
+battlefield_1$draw()
+#ask to locate sub 1
+
+
+battlefield_1$draw()
+#ask to locate sub 2
+
+
+battlefield_1$draw()
+#ask to locate sub 3
+
+
+battlefield_1$draw()
+#ask to locate destr 1
+
+
+battlefield_1$draw()
+#ask to locate destr 2
+
+
+battlefield_1$draw()
+#ask to locate carrier 1
+
+
+
+battlefield_1$draw()
+}
+
+currentPlayer <- "Black"
+
+#ask player 1 about the location of each ship
+
+while(TRUE){
+  battlefield_2$draw()
+  cat("Player ", currentPlayer, " locates Ships", sep="")
+  cat("\n", "\n", "", sep="")
+  
+  #ask to locate patrol 1
+  cat("Locate Patrol 1", sep="")
+  cat("Patrol is of size 1", sep="")
+  
+  ship_orientation <- readline("ship orientation? (H or V)") 
+  if (ship_orientation == "q") {
+    break;
+  }
+  
+  newCol <- readline("ship column? (from 1 to 10)")
+  if (newCol == "q") {
+    break;
+  }
+  
+  newRow <- readline("ship row? ")
+  if (newRow == "q") {
+    break;}
+  
+  
+  #ask to locate patrol 2
+  
+  #ask to locate patrol 3
+  
+  #ask to locate patrol 4
+  
+  #ask to locate sub 1
+  
+  #ask to locate sub 2
+  
+  #ask to locate sub 3
+  
+  #ask to locate destr 1
+  
+  #ask to locate destr 2
+}
+
+
+#Game starts
+
+
+# ships2 <- list(patrol_boat2_1, patrol_boat2_2, patrol_boat2_3, patrol_boat2_4, submarine2_1, submarine2_2, submarine2_3, destroyer2_1, destroyer2_2, carrier2)
+# print(ships[[1]]@player)
+
+# This is to assign the class "Battlefield" to the object "battlefield_1" and then display it on the console.
+
+
+# The part that follows is to ask questions to the players. It still doesn't work so well and it's incomplete, but you can uncomment it and try to run the code to see how it works.
+
+turn <- 0
+playerNames <- c("WHITE", "BLACK")
+scores <- c(0, 0)
+while (TRUE) {
+  battlefield_1$draw()
+  cat("Current turn: ", (turn + 1), "\n", sep="")
+  cat("Score: ", playerNames[1], " is ", scores[1], " | ", playerNames[2], " is ", scores[2], "\n", sep="")
+  cat("Player ", currentPlayer, " moves", sep="")
+  cat("\n", "Your arsenal includes 4 Patrol Boats, 3 Submarines, 2 Destroyers and 1 Carrier.", sep="")
+  cat("\n", "\n", "", sep="")
+  ship_orientation <- readline("ship orientation? ") 
+  if (ship_orientation == "q") {
+    break;
+  }
+  newCol <- readline("ship column? ")
+  if (newCol == "q") {
+    break;
+  }
