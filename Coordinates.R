@@ -349,34 +349,3 @@ while(TRUE){
   
   #ask to locate destr 2
 }
-
-
-#Game starts
-
-
-# ships2 <- list(patrol_boat2_1, patrol_boat2_2, patrol_boat2_3, patrol_boat2_4, submarine2_1, submarine2_2, submarine2_3, destroyer2_1, destroyer2_2, carrier2)
-# print(ships[[1]]@player)
-
-# This is to assign the class "Battlefield" to the object "battlefield_1" and then display it on the console.
-
-
-# The part that follows is to ask questions to the players. It still doesn't work so well and it's incomplete, but you can uncomment it and try to run the code to see how it works.
-
-turn <- 0
-playerNames <- c("WHITE", "BLACK")
-scores <- c(0, 0)
-while (TRUE) {
-  battlefield_1$draw()
-  cat("Current turn: ", (turn + 1), "\n", sep="")
-  cat("Score: ", playerNames[1], " is ", scores[1], " | ", playerNames[2], " is ", scores[2], "\n", sep="")
-  cat("Player ", currentPlayer, " moves", sep="")
-  cat("\n", "Your arsenal includes 4 Patrol Boats, 3 Submarines, 2 Destroyers and 1 Carrier.", sep="")
-  cat("\n", "\n", "", sep="")
-  ship_orientation <- readline("ship orientation? ") 
-  if (ship_orientation == "q") {
-    break;
-  }
-  newCol <- readline("ship column? ")
-  if (newCol == "q") {
-    break;
-  }
