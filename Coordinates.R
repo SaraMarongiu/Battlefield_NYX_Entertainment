@@ -96,3 +96,55 @@ Shots <- setRefClass("Shots",
                          }
                        }
                      ))
+
+Carrier <- setRefClass("carrier",
+                       fields=list(
+                         player = "numeric", #1 or 2
+                         coordinates = "vector", #x and y
+                         orientation = "character", #V or O
+                         life = "numeric", #ranges from 1 to 4 - is equal to the lenght
+                         isSunk = "logical", #to check if a ship is sunk or not
+                       ),
+                       methods=list(
+                         initialize = function() { 
+                         }
+                       ))
+
+Destroyer <- setRefClass("destroyer",
+                         fields=list(
+                           player = "numeric", #1 or 2
+                           coordinates = "vector", #x and y
+                           orientation = "character", #V or O
+                           life = "numeric", #ranges from 1 to 4 - is equal to the lenght
+                           isSunk = "logical", #to check if a ship is sunk or not
+                         ),
+                         methods=list(
+                           initialize = function() { 
+                           }
+                         ))
+
+Submarine <- setRefClass("submarine",
+                         fields=list(
+                           player = "numeric", #1 or 2
+                           coordinates = "vector", #x and y
+                           orientation = "character", #V or O
+                           life = "numeric", #ranges from 1 to 4 - is equal to the lenght
+                           isSunk = "logical", #to check if a ship is sunk or not 
+                         ),
+                         methods=list(
+                           initialize = function() { 
+                           }
+                         ))
+
+Patrol <- setRefClass("patrol",
+                      fields=list(
+                        player = "numeric", #1 or 2
+                        coordinates = "vector", #x and y
+                        orientation = "character", #V or O
+                        life = "numeric", #ranges from 1 to 4 - is equal to the lenght
+                        isSunk = "logical", #to check if a ship is sunk or not 
+                      ),
+                      methods=list(
+                        initialize = function() { 
+                        }
+                      ))
