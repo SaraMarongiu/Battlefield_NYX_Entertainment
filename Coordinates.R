@@ -212,3 +212,53 @@ ships <- list(patrol_boat1_1, patrol_boat1_2, patrol_boat1_3, patrol_boat1_4, su
 
 ship1 <- list(patrol_boat1_1, patrol_boat1_2, patrol_boat1_3, patrol_boat1_4, submarine1_1, submarine1_2, submarine1_3, destroyer1_1, destroyer1_2, carrier1)
 ship2 <- list(patrol_boat2_1, patrol_boat2_2, patrol_boat2_3, patrol_boat2_4, submarine2_1, submarine2_2, submarine2_3, destroyer2_1, destroyer2_2, carrier2)
+
+#location phase player 1
+
+battlefield_1 <- Battlefield()
+battlefield_1$draw()
+shots_1<- Shots()
+shots_1$draw()
+
+patrols1 <-4
+nsub1 <- 3
+ndest1 <- 2
+ncarr1 <- 1
+
+patrols2 <-4
+nsub2 <- 3
+ndest2 <- 2
+ncarr2 <- 1
+
+
+currentPlayer <- "White"
+
+#ask player 1 about the location of each ship
+
+while(TRUE){
+  battlefield_1$draw()
+  cat("Player ", currentPlayer, " locates Ships", sep="")
+  cat("\n", "Your arsenal include ", patrols1, " Patrol Boats ", nsub1, " Submarines ", ndest1, " Destroyers and ", ncarr1,  " Carrier.", sep="")
+  cat("\n", "\n", "", sep="")
+  
+  #ask to locate patrol 1
+  
+  cat("Locate Patrol 1", sep="")
+  cat("\n", "Patrol is of size 1", sep="\n")
+  
+  ship_orientation <- readline("ship orientation? (H or V)") 
+  if (ship_orientation == "q") {
+    break;
+  }
+  
+  newCol <- readline("ship column? (from 1 to 10)")
+  if (newCol == "q") {
+    break;
+  }
+  
+  newRow <- readline("ship row? ")
+  if (newRow == "q") {
+    break;}
+  
+  
+  destination <- Coordinates(as.integer(newRow), as.integer(newCol))
